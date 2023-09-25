@@ -18,4 +18,53 @@
 		WHERE 
 			`id` = #{id}
 	</select>
+	
+	<!-- 조회하는 것이 아니므로 resultType 없음 -->
+	<!-- parameterType 객체이므로 객체의경로.객체명 -->
+	<insert id="insertReview" parameterType="com.example.lesson03.domain.Review">
+		INSERT INTO `new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{storeId}
+			, #{menu}
+			, #{userName}
+			, #{point}
+			, #{review}
+			, NOW()
+			, NOW()
+		)
+	</insert>
+	
+	<!-- #{}의 값은 @Param()의 값과 매핑 -->
+	<insert id="insertReviewAsField" parameterType="map">
+		INSERT INTO `new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{storeId}
+			, #{menu}
+			, #{userName}
+			, #{point}
+			, #{review}
+			, NOW()
+			, NOW()
+		)
+	</insert>
 </mapper>
