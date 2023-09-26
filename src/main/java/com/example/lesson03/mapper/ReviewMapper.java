@@ -25,4 +25,11 @@ public interface ReviewMapper {
 			@Param("userName") String userName,
 			@Param("point") Double point,
 			@Param("review") String review);
+	
+	public int updateReviewById(
+			@Param("id") int id,
+			@Param("review") String review);
+	
+	// return type을 void로 해도 상관X
+	public int deleteReviewById(int id);
 }

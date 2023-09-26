@@ -31,4 +31,20 @@ public class ReviewBO {
 							Double point, String review) {
 		return reviewMapper.insertReviewAsField(storeId, menu, userName, point, review);
 	}
+	
+	// update
+	// input : id, review
+	// output : int(update가 성공된 행의 개수)
+	public int updateReviewById(int id, String review) {
+		return reviewMapper.updateReviewById(id, review);
+	}
+	
+	// delete
+	// input : id
+	// output : X
+	// return type을 int로 해도 상관X
+	public void deleteReviewById(int id) {
+		reviewMapper.deleteReviewById(id);
+	}
+	
 }
