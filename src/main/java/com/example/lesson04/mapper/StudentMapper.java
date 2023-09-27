@@ -1,5 +1,6 @@
 package com.example.lesson04.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.example.lesson04.domain.Student;
@@ -11,5 +12,5 @@ public interface StudentMapper {
 	
 	public void getStudentById(int id);
 	
-	public Student selectStudent(int id);
+	public Student selectStudent(@Param("id") int id);
 }

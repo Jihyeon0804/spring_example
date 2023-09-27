@@ -17,31 +17,31 @@
 		<table class="table table-striped">
 			<tr>
 				<th>번호</th>
-				<td>${latestStudent.id}</td>
+				<td>${student.id}</td>
 			</tr>
 			<tr>
 				<th>이름</th>
-				<td>${latestStudent.name}</td>
+				<td>${student.name}</td>
 			</tr>
 			<tr>
 				<th>휴대폰 번호</th>
-				<td>${latestStudent.phoneNumber}</td>
+				<td>${student.phoneNumber}</td>
 			</tr>
 			<tr>
 				<th>이메일주소</th>
-				<td>${latestStudent.email}</td>
+				<td>${student.email}</td>
 			</tr>
 			<tr>
 				<th>장래희망</th>
-				<td>${latestStudent.dreamJob}</td>
+				<td>${student.dreamJob}</td>
 			</tr>
 			<tr>
 				<th>생성일</th>
-				<td>${latestStudent.createdAt}</td>
+				<td>${student.createdAt}</td>
 			</tr>
 			<tr>
 				<th>수정일</th>
-				<td>${latestStudent.updatedAt}</td>
+				<td>${student.updatedAt}</td>
 			</tr>
 		</table>
 	</div>	

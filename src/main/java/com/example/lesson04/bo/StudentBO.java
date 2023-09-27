@@ -16,6 +16,8 @@ public class StudentBO {
 		studentMapper.insertStudent(student);
 	}
 	
+	// input : id
+	// output : 객체를 return
 	public Student getStudentById(int id) {
 		return studentMapper.selectStudent(id);
 	}
