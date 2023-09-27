@@ -23,6 +23,7 @@ public class Lesson04Ex01Controller {
 	// 요청 URL : http://localhost/lesson04/ex01/sign-up-view
 //	@RequestMapping("/sign-up-view")	// get과 post 방식 둘 다 허용
 	@RequestMapping(path = "/sign-up-view", method = RequestMethod.GET)		// get 방식만 허용
+//	@GetMapping("/sign-up-view")
 	public String signUpView() {
 		return "lesson04/signUp";	// jsp view 경로
 	}
