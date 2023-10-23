@@ -25,8 +25,27 @@ public class Lesson07Ex01RestController {
 		String email = "jeon@kakao.com";
 		String dreamJob = "개발자";
 
-		// insert 된 것을 select 해서 반환
+		// insert 된 것을 객체로 반환
 		// 지금 들어간 id 값도 getId()로 바로 꺼낼 수 있다.
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
+	}
+	
+	
+	// U : update
+	@GetMapping("/2")
+	public StudentEntity update() {
+		// id:4 dreamJob을 변경
+		
+		// update 된 것을 객체로 반환
+		return studentBO.updateStudentDreamJobById(4, "디자이너");
+	}
+	
+	
+	// D : delete
+	@GetMapping("/3")
+	public String delete() {	// delete는 객체 반환 X
+		// id : 4
+		studentBO.deleteStudentById(4);
+		return "삭제 완료";
 	}
 }
