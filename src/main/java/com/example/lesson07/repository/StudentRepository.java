@@ -44,7 +44,10 @@ public interface StudentRepository extends JpaRepository<StudentEntity, Integer>
 	// ex02/2
 	// 1) JPQL Entity로 조회 - DB에 접근하지 않고 Entity로 조회
 //	@Entity(name="new_student")를 설정하지 않았으면 ... from StudentEntity st where ... 로 value 지정해야함
-	@Query(value = "select st from new_student st where st.dreamJob = :dreamJob")
+//	@Query(value = "select st from new_student st where st.dreamJob = :dreamJob")
+	
+	// 2) native query로 조회
+	@Query(value="select * from `new_student` where dreamJob = :dreamJob", nativeQuery = true)
 	public List<StudentEntity> findByDreamJob(@Param("dreamJob") String dreamJob);
 	
 }
